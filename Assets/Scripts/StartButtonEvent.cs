@@ -18,7 +18,6 @@ public class StartButtonEvent : ScriptableObject
 
     public void NotifyListeners()
     {
-        Debug.Log("Notify StartButtonEvent Listeners");
         _onStartButtonClick?.Invoke();
     }
 }

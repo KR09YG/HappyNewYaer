@@ -9,9 +9,15 @@ public class OutGameManager : MonoBehaviour
     [SerializeField] private Fade _image;
     private const int FADE_DURSTION = 1;
 
+    private void Start()
+    {
+        AudioManager.Instance.PlayBGM(SoundType.BGM_Title);
+    }
+
     public void OnStartButton()
     {
         Debug.Log("OnStartButton");
+        AudioManager.Instance.PlaySE(SoundType.SE_ButtonClick);
         StartCoroutine(WaitEvent());
     }
 
